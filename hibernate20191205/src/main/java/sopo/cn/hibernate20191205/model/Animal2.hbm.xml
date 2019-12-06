@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019??12??6?? ????11:37:34 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="sopo.cn.hibernate20191205.model.Animal2"
+		table="T_ANIMAL2">
+		<id name="id" type="java.lang.String">
+			<column name="ID" />
+			<generator class="uuid2" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+
+		<union-subclass
+			name="sopo.cn.hibernate20191205.model.Pig2" table="T_PIG2">
+			<property name="weight" type="double" column="WEIGHT"></property>
+		</union-subclass>
+		<union-subclass
+			name="sopo.cn.hibernate20191205.model.Bird2" table="T_BIRD2">
+			<property name="height" type="double" column="HEIGHT"></property>
+		</union-subclass>
+	</class>
+</hibernate-mapping>
