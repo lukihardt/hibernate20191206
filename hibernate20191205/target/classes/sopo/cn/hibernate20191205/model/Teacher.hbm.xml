@@ -3,10 +3,10 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2019??12??6?? ????3:14:26 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="sopo.cn.hibernate20191205.model.Teacher" table="TEACHER">
-        <id name="id" type="int">
+    <class name="sopo.cn.hibernate20191205.model.Teacher" table="TEACHER" lazy="true">
+        <id name="id" type="int" >
             <column name="ID" />
-            <generator class="native" />
+            <generator class="native"/>
         </id>
         <property name="tname" type="java.lang.String">
             <column name="TNAME" />
