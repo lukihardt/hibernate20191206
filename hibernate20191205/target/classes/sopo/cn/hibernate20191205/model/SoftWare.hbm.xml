@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019??12??7?? ????10:50:25 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="sopo.cn.hibernate20191205.model.SoftWare" table="SOFTWARE">
+        <id name="id" type="string">
+            <column name="ID" />
+            <generator class="uuid2" />
+        </id>
+        <property name="os" type="java.lang.String">
+            <column name="OS" />
+        </property>
+        <property name="Browser" type="java.lang.String">
+            <column name="BROWSER" />
+        </property>
+        <many-to-one name="computer" class="sopo.cn.hibernate20191205.model.Computer" fetch="select">
+            <column name="CS_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
