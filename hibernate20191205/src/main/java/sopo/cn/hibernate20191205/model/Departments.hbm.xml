@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019??12??11?? ????10:54:45 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="sopo.cn.hibernate20191205.model.Departments" table="DEPARTMENTS">
+        <id name="department_id" type="java.lang.Integer">
+            <column name="DEPARTMENT_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="manager_id" type="java.lang.Integer">
+            <column name="MANAGER_ID" />
+        </property>
+        <property name="department_name" type="java.lang.String">
+            <column name="DEPARTMENT_NAME" />
+        </property>
+        <property name="location_id" type="java.lang.Integer">
+            <column name="LOCATION_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

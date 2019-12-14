@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019??12??11?? ????10:13:58 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="sopo.cn.hibernate20191205.model.Employees2" table="EMPLOYEES">
+        <id name="employee_id" type="integer">
+            <column name="EMPLOYEE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="job_id" type="string">
+            <column name="JOB_ID" />
+        </property>
+        <property name="first_name" type="java.lang.String">
+            <column name="FIRST_NAME" />
+        </property>
+        <property name="last_name" type="java.lang.String">
+            <column name="LAST_NAME" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <property name="phone_number" type="java.lang.String">
+            <column name="PHONE_NUMBER" />
+        </property>
+        <property name="salary" type="java.lang.Double">
+            <column name="SALARY" />
+        </property>
+        <property name="commission_pct" type="java.lang.Double">
+            <column name="COMMISSION_PCT" />
+        </property>
+        <property name="manager_id" type="integer">
+            <column name="MANAGER_ID" />
+        </property>
+        <property name="department_id" type="integer">
+            <column name="DEPARTMENT_ID" />
+        </property>
+        <property name="hiredate" type="java.sql.Date">
+            <column name="HIREDATE" />
+        </property>
+    </class>
+</hibernate-mapping>

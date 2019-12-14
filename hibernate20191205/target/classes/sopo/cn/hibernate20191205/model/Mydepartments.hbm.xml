@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019??12??11?? ????4:48:25 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="sopo.cn.hibernate20191205.model.Mydepartments" table="MYDEPARTMENTS">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="dpName" type="java.lang.String">
+            <column name="DPNAME" />
+        </property>
+    </class>
+</hibernate-mapping>
