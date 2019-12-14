@@ -177,4 +177,19 @@ public class TestHql {
 			System.out.println(employee.toString());
 		}
 	}
+	
+	@Test
+	public void testPolymericQuery() {
+		Session session = HibernateUtils20191206.getSessiontory("hibernate.cfg.xml").openSession();
+		String hql = "select avg(e.id), sum(e.id) from Employees e";
+		@SuppressWarnings("unchecked")
+		Query<Object[]> query = session.createQuery(hql);
+		List<Object[]> lists = query.list();
+		
+		for (Object[] objects : lists) {
+			for (int i = 0; i < objects.length; i++) {
+				System.out.println(objects[i]);
+			}
+		}
+	}
 }

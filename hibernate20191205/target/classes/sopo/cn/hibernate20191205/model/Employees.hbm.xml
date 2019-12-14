@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2019??12??10?? ????4:19:29 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="sopo.cn.hibernate20191205.model.Employees" table="EMPLOYEES">
+    <class name="sopo.cn.hibernate20191205.model.Employees" table="EMPLOYEESOLD">
         <id name="id" type="int">
             <column name="ID" />
             <generator class="native" />

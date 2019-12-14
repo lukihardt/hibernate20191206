@@ -4,7 +4,7 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate1204_4?serverTimezone=Asia/Shanghai</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/myemployees?serverTimezone=Asia/Shanghai</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password">F2NRnjVsKe</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
@@ -19,6 +19,15 @@
 		<property name="hibernate.c3p0.idle_test_period">3000</property>
 		<property name="hibernate.c3p0.acquire_increment">2</property>
 		<property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
+		<!-- 开启二级缓存 -->
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+		<!-- 配置二级缓存技术提供者 -->
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
+		<!-- 开启查询缓存步骤 -->
+		<property name="cache.use_query_cache">true</property>
+
+		<property name="current_session_context_class">thread</property>
+
 		<mapping
 			resource="sopo/cn/hibernate20191205/model/Animal.hbm.xml" />
 		<mapping
@@ -31,6 +40,24 @@
 			resource="sopo/cn/hibernate20191205/model/SoftWare.hbm.xml" />
 		<mapping
 			resource="sopo/cn/hibernate20191205/model/Employees.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191205/model/Employees2.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191205/model/Departments.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191205/model/Mydepartments.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191205/model/Myemployees.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191205/model/Myemployees_copy.hbm.xml" />
+		<!-- 配置使用缓存的类 -->
+		<class-cache usage="read-write"
+			class="sopo.cn.hibernate20191205.model.Employees2" />
+		<class-cache usage="read-write"
+			class="sopo.cn.hibernate20191205.model.Computer" />
+		<class-cache usage="read-only"
+			class="sopo.cn.hibernate20191205.model.SoftWare" />
+		<collection-cache usage="read-write"
+			collection="sopo.cn.hibernate20191205.model.Computer.set" />
 	</session-factory>
-	
 </hibernate-configuration>
